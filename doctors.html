@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Doctors</title>
+    <link rel="icon" href="./src/bk.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+  .tab-pane {
+    margin-top: 10px;
+  }
+
+  .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+  .affix+.container-fluid {
+    padding-top: 570px;
+  }
+
+  body {
+    background-color: powderblue;
+    background-image: url("./src/feedbackbg2.jpg");
+    color: black;
+  }
+</style>
+
+<body>
+
+  <ul class="breadcrumb" style="margin-bottom: 0">
+    <li><a href="./index.html">Login Page</a></li>
+    <li><a href="./admin.html">Admin Page</a></li>
+    <li>Doctors Feedback</li>
+  </ul>
+  <div id="topbanner" class="container-fluid m-0" style="color:#fff;height:200px; position:relative; background-image: url('./src/banner.png');">
+
+    <h4 style="position:absolute;bottom: 0;right: 260px;">Doctors Feedback.</h4>
+
+  </div>
+
+  <nav class="navbar navbar-inverse navbar-expand" style="display:block;" data-spy="affix" data-offset-top="220">
+    <img src="./src/logo.png" height="40px" style="float:left; margin-left: 5em; margin-top:.5em;" />
+
+    <ul class="nav navbar-nav" style="float:right; margin-right: 5em;">
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href=# data-toggle="dropdown"> <span class="glyphicon 
+glyphicon glyphicon glyphicon-align-justify" aria-hidden="true"> </span> BLOG </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Success Stories</a>
+          <a class="dropdown-item" href="#">Upcoming Events</a>
+          <a class="dropdown-item" href="#">Parent Company Blog</a>
+        </div>
+      </li>
+      <button type="button" class="btn btn-primary justify-content-end"><span class="glyphicon glyphicon glyphicon-phone-alt" aria-hidden="true">&nbsp</span>GET IN TOUCH <span class="badge badge-pill ">2</span></button>
+      <button type="button" class="btn btn-success" onclick="window.location.href='./admin.html'" style="font-size: 1.2em;">Go Back</button>
+      <button type="button" class="btn btn-danger" onclick="window.location.href='./index.html'" style="font-size: 1.2em;">Log Out</button>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Doctors Feedback Recieved</h1>
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#tab1" data-toggle="tab">Search by Name</a>
+        </li>
+        <li>
+          <a href="#tab2" data-toggle="tab">Search by Department</a>
+        </li>
+      </ul>
+      <div class="tab-content ">
+        <div class="tab-pane active " id="tab1">
+          <div class="well" style="background-color: rgb(180, 240, 224);">
+            <form role="form">
+              <div class="form-group">
+                <h3>Enter Name of doctor to view reviews recieved.</h3>
+                <input class="form-control" id="dname" type="text" placeholder="Doctor's Name">
+                <input type="submit" value="Submit Name" class="btn btn-primary">
+              </div>
+            </form>
+
+
+
+
+          </div>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <div class="well" style="background-color: rgb(214, 240, 180);">
+            <form role=" form">
+            <div class="form-group">
+              <h3>Enter Department to get view doctors of department having reviews.</h3>
+              <input type="text" class="form-control" id="ddep" placeholder="Department">
+              <input type="submit" value="Submit Department" class="btn btn-primary">
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- carasoul starts -->
+    <div class="row"><br>
+      <div class=' col-md-6 '>
+        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+          <!-- Bottom Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#quote-carousel" data-slide-to="1"></li>
+            <li data-target="#quote-carousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Carousel Slides -->
+          <div class="carousel-inner" style="min-height:200px">
+
+            <div class="item active">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d1.png">
+                </div>
+              </blockquote>
+            </div>
+            <div class="item">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d2.png">
+                </div>
+              </blockquote>
+            </div>
+            <div class="item">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d3.png">
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Carousel Buttons Next/Prev -->
+          <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+          <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+      <div class='col-md-6 '>
+        <div class="carousel slide" data-ride="carousel" id="quote-carousel2">
+          <!-- Bottom Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#quote-carousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#quote-carousel2" data-slide-to="1"></li>
+            <li data-target="#quote-carousel2" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Carousel Slides  -->
+          <div class="carousel-inner" style="min-height:200px">
+
+            <div class="item active">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d4.png">
+                </div>
+              </blockquote>
+            </div>
+            <div class="item">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d3.png">
+                </div>
+              </blockquote>
+            </div>
+            <div class="item">
+              <blockquote>
+                <div class="row">
+                  <img src="./src/d5.png">
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Carousel Buttons Next/Prev -->
+          <a data-slide="prev" href="#quote-carousel2" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+          <a data-slide="next" href="#quote-carousel2" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <!-- carasol ended -->
+
+  <h1>No more records found...</h1><hr>
+  </div>
+</body>
+
+</html>
+
+<script>
+  $(document).ready(function() {
+
+    var dnamelist = ['Dr. Dave', 'Dr. Nataraja', 'Prof. Jayee', 'Dr. Lachinet', 'Dr. Shoemaker', 'Dr. Cornfield', 'Dr. Charlse', 'Prof. Banuka'];
+
+    var ddeplist = ['Radiology', 'Cardiologists', 'Anesthesiologists', 'Allergists', 'Immunologists', 'Colon and Rectal Surgeon', 'Dermatologists', 'Endocrinologists', 'Gastroenterologists', 'Hematologists', 'Neurologists', 'Denstist', 'Oncologists'];
+
+    $('#dname').typeahead({
+      source: dnamelist
+    });
+
+
+    $('#ddep').typeahead({
+      source: ddeplist
+    });
+  });
+</script>

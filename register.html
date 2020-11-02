@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./src/bk.ico">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: powderblue;
+            background-image: url("./src/doc2.jpg");
+            color: black;
+        }
+
+        p {
+            color: green;
+        }
+
+        .navbar a {
+            font-size: 1.1em;
+        }
+
+        h4 {
+            color: navy;
+        }
+
+        label {
+            display: inline-block;
+            width: 10em;
+            text-align: right;
+        }
+        
+        .label {
+            font-size: 1em !important;
+        }
+
+        .caption {
+            text-align: center;
+        }
+
+        .thumbnail {
+            background-color: rgb(256, 256, 256, 0.8)
+        }
+
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .affix+.container-fluid {
+            padding-top: 570px;
+        }
+
+        #topbanner {
+            background-image: url("./src/banner.png");
+            border-style: solid;
+        }
+
+        .form-row {
+            margin: 0 -15px;
+        }
+        .form-row .form-group {
+            width: 50%;
+            padding: 0 15px;
+        }
+        .form-group {
+            margin-bottom: 23px;
+            position: relative;
+        }
+
+        input,        select {
+            display: block;
+            width: 100%;
+            border: 1px solid #ebebeb;
+            padding: 11px 20px;
+            box-sizing: border-box;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 13px;
+            
+    box-shadow: 0 0 10px #12AADD;
+        }
+
+input:focus,select:focus {
+      outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #121299;
+        }
+        .form-radio {
+            margin-bottom: 18px;
+        }
+        .form-radio input {
+            width: auto;
+            display: inline-block;
+        }
+        .signup-form{
+            background-color: rgb(45, 157, 190, 0.4);
+            border-radius: 20px;
+            padding: 10px;
+        }
+    
+        .defaults{
+            all: initial !important;
+        }
+         /* css for typehead dropdown --- start*/
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+.tt-menu {    /* used to be tt-dropdown-menu in older versions */
+  min-width: 170px;
+  margin-top: 4px;
+  padding: 4px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+  color: #fff;
+  background-color: #0097cf;
+}
+.tt-suggestion p {
+  margin: 0;
+}
+        /* css for typehead dropdown --- end*/
+    </style>
+</head>
+
+<body>
+    <ul class="breadcrumb" style="margin-bottom: 0">
+        <li><a href="./index.html">Login Page</a></li>
+        <li>Patient Registration</li>
+    </ul>
+    <div id="topbanner" class="container-fluid m-0" style="color:#fff;height:200px; position:relative;">
+
+        <h4 style="position:absolute;bottom: 0;right: 260px;">Patient Registration.</h4>
+
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark p-0" style="display:block;" data-spy="affix" data-offset-top="220">
+        <img src="./src/logo.png" height="40px" style="float:left; margin-left: 5em; margin-top:.5em;" />
+
+        <ul class="navbar-nav" style="float:right; margin-right: 5em;">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href=# data-toggle="dropdown"> <span class="glyphicon 
+glyphicon glyphicon glyphicon-align-justify" aria-hidden="true"> </span> BLOG </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Success Stories</a>
+                    <a class="dropdown-item" href="#">Upcoming Events</a>
+                    <a class="dropdown-item" href="#">Parent Company Blog</a>
+                </div>
+            </li>
+            <button type="button" class="btn btn-primary justify-content-end m-1" data-toggle="modal" data-target="#getintouch"><span class="glyphicon glyphicon glyphicon-phone-alt" aria-hidden="true">&nbsp</span>GET IN TOUCH <span class="badge badge-pill ">2</span></button>
+            <button type="button" class="btn btn-danger m-1" onclick="window.location.href='./index.html'" style="font-size: 1.2em;">Go Back</button>
+        </ul>
+
+    </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="getintouch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+    <div class="modal-content"  style="background-color: lightpink;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle"><img src="./src/logo.png" style="height:1.5em"> Get in touch with us!</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="row">
+        <div class="col-md-12 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+      
+
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- end modal -->
+  
+    <div class="main">
+        <div class="container px-2">
+            <div class="signup-content row">
+                <div class="col-md-6 d-none d-md-block">
+                  <h2><i>Thank you for trusting us to be your healthcare partner!</i></h2>
+                    <img src="src/regimg.jpg" class="img-thumbnail" alt="">
+                </div>
+                <div class="col-md-6 signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Patient Registration Form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="label label-primary" for="">Name :</label>
+                                <input type="text" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="label label-primary" for="">Next of Kin:</label>
+                                <input type="text" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-primary" for="address">Address :</label>
+                            <input type="text" required />
+                        </div>
+                        <div class="form-radio">
+                            <label class="label label-warning" for="" class="">Gender :</label>
+                                <input type="radio" checked>
+                                <label class ="defaults" for="">Male</label>
+                                <input type="radio" name="gender" id="female">
+                                <label class="defaults" for="">Female</label>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="label label-primary" for="state">State (typehead):</label>
+                                <div class="form-select" >
+                                  
+  <input class="typeahead" type="text" id="states_search" placeholder="State of India">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label label-primary" for="city">City :</label>
+                                <div class="form-select">
+                                     <input class="typeahead" type="text" id="city" placeholder="City of India">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-success" for="birth_date">DOB :</label>
+                            <input type="text" >
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-primary" for="">Contact No :</label>
+                            <input type="text" >
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-primary" for="">Insurance Status :</label>
+                            <div class="form-select">
+                                <select name="" id="">
+                                    <option value=""></option>
+                                    <option value="" selected>Personal Insurance</option>
+                                    <option value="">Dependent of Insurance</option>
+                                    <option value="">DO not have Insurance</option>
+                                </select>
+                    
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-info" for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <label class="label label-danger" for="pw">Password :</label>
+                            <input type="password"  />
+                        </div> 
+                        <div class="form-submit ">
+                            <input type="submit" value="Reset All" class="submit btn w-25 bg-secondary"  />
+                            <input type="submit" value="Submit Form" class="submit btn w-25 bg-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+     
+
+
+<script >
+$(document).ready(function() {
+
+ var states = ['Andhra Pradesh', 'Assam', 'Arunachal Pradesh', 'Bihar', 'Goa', 'Gujarat', 'Jammu and Kashmir', 'Jharkhand', 'West Bengal', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Orissa', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Tripura', 'Uttaranchal', 'Uttar Pradesh', 'Haryana', 'Himachal Pradesh', 'Chhattisgarh'
+];
+  
+  var cities = ['Andaman And Nicobar Islands (Union Territory)', 'Port Blair', 'Andhra Pradesh', 'Adoni', 'Amaravati', 'Anantapur', 'Chandragiri', 'Chittoor', 'Dowlaiswaram', 'Eluru', 'Guntur', 'Kadapa', 'Kakinada', 'Kurnool', 'Machilipatnam', 'Nagarjunakoṇḍa', 'Rajahmundry', 'Srikakulam', 'Tirupati', 'Vijayawada', 'Visakhapatnam', 'Vizianagaram', 'Yemmiganur', 'Arunachal Pradesh', 'Itanagar', 'Assam', 'Dhuburi', 'Dibrugarh', 'Dispur', 'Guwahati', 'Jorhat', 'Nagaon', 'Sibsagar', 'Silchar', 'Tezpur', 'Tinsukia', 'Bihar', 'Ara', 'Baruni', 'Begusarai', 'Bettiah', 'Bhagalpur', 'Bihar Sharif', 'Bodh Gaya', 'Buxar', 'Chapra', 'Darbhanga', 'Dehri', 'Dinapur Nizamat', 'Gaya', 'Hajipur', 'Jamalpur', 'Katihar', 'Madhubani', 'Motihari', 'Munger', 'Muzaffarpur', 'Patna', 'Purnia', 'Pusa', 'Saharsa', 'Samastipur', 'Sasaram', 'Sitamarhi', 'Siwan', 'Chandigarh (Union Territory)', 'Chandigarh', 'Chhattisgarh', 'Ambikapur', 'Bhilai', 'Bilaspur', 'Dhamtari', 'Durg', 'Jagdalpur', 'Raipur', 'Rajnandgaon', 'Dadra And Nagar Haveli (Union Territory)', 'Silvassa', 'Daman And Diu (Union Territory)', 'Daman', 'Diu', 'Delhi (National Capital Territory)', 'Delhi', 'New Delhi', 'Goa', 'Madgaon', 'Panaji', 'Gujarat', 'Ahmadabad', 'Amreli', 'Bharuch', 'Bhavnagar', 'Bhuj', 'Dwarka', 'Gandhinagar', 'Godhra', 'Jamnagar', 'Junagadh', 'Kandla', 'Khambhat', 'Kheda', 'Mahesana', 'Morvi', 'Nadiad', 'Navsari', 'Okha', 'Palanpur', 'Patan', 'Porbandar', 'Rajkot', 'Surat', 'Surendranagar', 'Valsad', 'Veraval', 'Haryana', 'Ambala', 'Bhiwani', 'Chandigarh', 'Faridabad', 'Firozpur Jhirka', 'Gurgaon', 'Hansi', 'Hisar', 'Jind', 'Kaithal', 'Karnal', 'Kurukshetra', 'Panipat', 'Pehowa', 'Rewari', 'Rohtak', 'Sirsa', 'Sonipat', 'Himachal Pradesh', 'Bilaspur', 'Chamba', 'Dalhousie', 'Dharmshala', 'Hamirpur', 'Kangra', 'Kullu', 'Mandi', 'Nahan', 'Shimla', 'Una', 'Jammu And Kashmir', 'Anantnag', 'Baramula', 'Doda', 'Gulmarg', 'Jammu', 'Kathua', 'Leh', 'Punch', 'Rajauri', 'Srinagar', 'Udhampur', 'Jharkhand', 'Bokaro', 'Chaibasa', 'Deoghar', 'Dhanbad', 'Dumka', 'Giridih', 'Hazaribag', 'Jamshedpur', 'Jharia', 'Rajmahal', 'Ranchi', 'Saraikela', 'Karnataka', 'Badami', 'Ballari', 'Bangalore', 'Belgavi', 'Bhadravati', 'Bidar', 'Chikkamagaluru', 'Chitradurga', 'Davangere', 'Halebid', 'Hassan', 'Hubballi-Dharwad', 'Kalaburagi', 'Kolar', 'Madikeri', 'Mandya', 'Mangaluru', 'Mysuru', 'Raichur', 'Shivamogga', 'Shravanabelagola', 'Shrirangapattana', 'Tumkuru', 'Kerala', 'Alappuzha', 'Badagara', 'Idukki', 'Kannur', 'Kochi', 'Kollam', 'Kottayam', 'Kozhikode', 'Mattancheri', 'Palakkad', 'Thalassery', 'Thiruvananthapuram', 'Thrissur', 'Madhya Pradesh', 'Balaghat', 'Barwani', 'Betul', 'Bharhut', 'Bhind', 'Bhojpur', 'Bhopal', 'Burhanpur', 'Chhatarpur', 'Chhindwara', 'Damoh', 'Datia', 'Dewas', 'Dhar', 'Guna', 'Gwalior', 'Hoshangabad', 'Indore', 'Itarsi', 'Jabalpur', 'Jhabua', 'Khajuraho', 'Khandwa', 'Khargon', 'Maheshwar', 'Mandla', 'Mandsaur', 'Mhow', 'Morena', 'Murwara', 'Narsimhapur', 'Narsinghgarh', 'Narwar', 'Neemuch', 'Nowgong', 'Orchha', 'Panna', 'Raisen', 'Rajgarh', 'Ratlam', 'Rewa', 'Sagar', 'Sarangpur', 'Satna', 'Sehore', 'Seoni', 'Shahdol', 'Shajapur', 'Sheopur', 'Shivpuri', 'Ujjain', 'Vidisha', 'Maharashtra', 'Ahmadnagar', 'Akola', 'Amravati', 'Aurangabad', 'Bhandara', 'Bhusawal', 'Bid', 'Buldana', 'Chandrapur', 'Daulatabad', 'Dhule', 'Jalgaon', 'Kalyan', 'Karli', 'Kolhapur', 'Mahabaleshwar', 'Malegaon', 'Matheran', 'Mumbai', 'Nagpur', 'Nanded', 'Nashik', 'Osmanabad', 'Pandharpur', 'Parbhani', 'Pune', 'Ratnagiri', 'Sangli', 'Satara', 'Sevagram', 'Solapur', 'Thane', 'Ulhasnagar', 'Vasai-Virar', 'Wardha', 'Yavatmal', 'Manipur', 'Imphal', 'Meghalaya', 'Cherrapunji', 'Shillong', 'Mizoram', 'Aizawl', 'Lunglei', 'Nagaland', 'Kohima', 'Mon', 'Phek', 'Wokha', 'Zunheboto', 'Odisha', 'Balangir', 'Baleshwar', 'Baripada', 'Bhubaneshwar', 'Brahmapur', 'Cuttack', 'Dhenkanal', 'Keonjhar', 'Konark', 'Koraput', 'Paradip', 'Phulabani', 'Puri', 'Sambalpur', 'Udayagiri', 'Puducherry (Union Territory)', 'Karaikal', 'Mahe', 'Puducherry', 'Yanam', 'Punjab', 'Amritsar', 'Batala', 'Chandigarh', 'Faridkot', 'Firozpur', 'Gurdaspur', 'Hoshiarpur', 'Jalandhar', 'Kapurthala', 'Ludhiana', 'Nabha', 'Patiala', 'Rupnagar', 'Sangrur', 'Rajasthan', 'Abu', 'Ajmer', 'Alwar', 'Amer', 'Barmer', 'Beawar', 'Bharatpur', 'Bhilwara', 'Bikaner', 'Bundi', 'Chittaurgarh', 'Churu', 'Dhaulpur', 'Dungarpur', 'Ganganagar', 'Hanumangarh', 'Jaipur', 'Jaisalmer', 'Jalor', 'Jhalawar', 'Jhunjhunu', 'Jodhpur', 'Kishangarh', 'Kota', 'Merta', 'Nagaur', 'Nathdwara', 'Pali', 'Phalodi', 'Pushkar', 'Sawai Madhopur', 'Shahpura', 'Sikar', 'Sirohi', 'Tonk', 'Udaipur', 'Sikkim', 'Gangtok', 'Gyalsing', 'Lachung', 'Mangan', 'Tamil Nadu', 'Arcot', 'Chengalpattu', 'Chennai', 'Chidambaram', 'Coimbatore', 'Cuddalore', 'Dharmapuri', 'Dindigul', 'Erode', 'Kanchipuram', 'Kanniyakumari', 'Kodaikanal', 'Kumbakonam', 'Madurai', 'Mamallapuram', 'Nagappattinam', 'Nagercoil', 'Palayankottai', 'Pudukkottai', 'Rajapalaiyam', 'Ramanathapuram', 'Salem', 'Thanjavur', 'Tiruchchirappalli', 'Tirunelveli', 'Tiruppur', 'Tuticorin', 'Udhagamandalam', 'Vellore', 'Telangana', 'Hyderabad', 'Karimnagar', 'Khammam', 'Mahbubnagar', 'Nizamabad', 'Sangareddi', 'Warangal', 'Tripura', 'Agartala', 'Uttar Pradesh', 'Agra', 'Aligarh', 'Amroha', 'Ayodhya', 'Azamgarh', 'Bahraich', 'Ballia', 'Banda', 'Bara Banki', 'Bareilly', 'Basti', 'Bijnor', 'Bithur', 'Budaun', 'Bulandshahr', 'Deoria', 'Etah', 'Etawah', 'Faizabad', 'Farrukhabad-cum-Fatehgarh', 'Fatehpur', 'Fatehpur Sikri', 'Ghaziabad', 'Ghazipur', 'Gonda', 'Gorakhpur', 'Hamirpur', 'Hardoi', 'Hathras', 'Jalaun', 'Jaunpur', 'Jhansi', 'Kannauj', 'Kanpur', 'Lakhimpur', 'Lalitpur', 'Lucknow', 'Mainpuri', 'Mathura', 'Meerut', 'Mirzapur-Vindhyachal', 'Moradabad', 'Muzaffarnagar', 'Partapgarh', 'Pilibhit', 'Prayagraj', 'Rae Bareli', 'Rampur', 'Saharanpur', 'Sambhal', 'Shahjahanpur', 'Sitapur', 'Sultanpur', 'Tehri', 'Varanasi', 'Uttarakhand', 'Almora', 'Dehra Dun', 'Haridwar', 'Mussoorie', 'Nainital', 'Pithoragarh', 'West Bengal', 'Alipore', 'Alipur Duar', 'Asansol', 'Baharampur', 'Bally', 'Balurghat', 'Bankura', 'Baranagar', 'Barasat', 'Barrackpore', 'Basirhat', 'Bhatpara', 'Bishnupur', 'Budge Budge', 'Burdwan', 'Chandernagore', 'Darjiling', 'Diamond Harbour', 'Dum Dum', 'Durgapur', 'Halisahar', 'Haora', 'Hugli', 'Ingraj Bazar', 'Jalpaiguri', 'Kalimpong', 'Kamarhati', 'Kanchrapara', 'Kharagpur', 'Koch Bihar', 'Kolkata', 'Krishnanagar', 'Malda', 'Midnapore', 'Murshidabad', 'Navadwip', 'Palashi', 'Panihati', 'Purulia', 'Raiganj', 'Santipur', 'Shantiniketan', 'Shrirampur', 'Siliguri', 'Siuri', 'Tamluk', 'Titagarh']; 
+  
+$('#city').typeahead({
+source: cities
+});
+
+
+$('#states_search').typeahead({
+source: states
+});
+});
+</script>
+</body></html>
